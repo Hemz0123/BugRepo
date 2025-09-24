@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+             Tech fest 
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        
+            <style>
+                body
+                {
+                    font-family: sans-serif;
+                    background-color: azure;
+                }
+                form
+                {
+                    max-width: 8;
+                    margin: auto;
+                }
+                input
+                {
+                    padding: 3px;
+                }
+                
+            </style>
+
+    </head>
+    <body>
+        <p> <h2> Welcome all to Tech Fest !! </h2></p>
+        <h3> Grab a seat to showcase your talent </h3>
+        <form id="myForm">
+            <label> Name :</label>
+            <input type="text" name="username"><br> <br>
+            <label> E-mail: </label>
+            <input type="text" name="email"><br> <br>
+            <label> Password: </label>
+            <input type ="password" name="password"><br> <br>
+            <label> Department :</label>
+            <input type ="text" name="departent"><br> <br>
+            <label> Choose events: </label><br><br>
+            <input type="radio" name="hackathons" values="Hackathons">hackathons<br>
+            <input type="radio" name="workshops" values="workshops">workshops<br>
+            <input type="radio" name="seminars" values="seminars">seminars<br>
+            <input type="radio" name="conclave" values="conclave">conclave<br><br>
+
+
+            <input type ="submit" value="submit">
+        </form>
+    </body>
+    <script>
+        alert("Welcome");
+        
+document.getElementById('myForm').onsubmit = function(e) {
+  e.preventDefault();
+  const data = new FormData(this);
+  let result = '';
+  for (const [key, val] of data.entries()) {
+    result += `${key}: ${val}<br>`;
+  }
+  const newWindow = window.open();
+  newWindow.document.write(`<h1>Form Data Submitted</h1><p>${result}</p>`);
+  newWindow.document.close();
+};
+</script>
+    
+    
+</html>
+
+
+
